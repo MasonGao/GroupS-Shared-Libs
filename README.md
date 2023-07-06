@@ -1,6 +1,6 @@
 <div align="center">
 
-# ◐  C++ Shared Library  ◑
+#  C++ Shared Library 
 
 **The goal of this project is to manage generic C++ code of Group'S.**
 
