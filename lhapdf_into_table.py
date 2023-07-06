@@ -9,6 +9,7 @@
         name: name of the pdf set, e.g. 'cteq6l1'
         ind: index of set to use, 0 by default
 '''
+
 import numpy as np
 from numpy import log10, sqrt
 
