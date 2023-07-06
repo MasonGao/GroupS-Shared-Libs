@@ -60,8 +60,6 @@ This project relies on the following C++ libraries or programs:
 | ------- | ------- |------- |
 
 
-| Eigen3  | LHAPDF  | CUBA   |
-| ------- | ------- |------- |
 
 
 ## Conclusion
