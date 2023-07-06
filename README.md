@@ -8,7 +8,7 @@ The goal of this project is to manage generic C++ code of Group'S .
 This project aims to provide a comprehensive solution for managing and organizing generic C++ code in HEP calculation. It is designed to simplify the calculation process, improve code maintainability, and enhance collaboration among students in Group'S. Such as QCD Beta function:
 
 $$
-\beta(\alpha_{s})=-2\alpha_{s}\sum_{n=0}^{\infty}\beta_{n}\left(\frac{\alpha_{s}}{4\pi}\right)^{n+1}.
+\beta(\alpha_{s})=-2\alpha_{s}\sum_{n=0}^{\infty}\beta_{n}\left(\frac{\alpha_{s}}{4\pi}\right)^{n+1},
 $$
 
 ```
