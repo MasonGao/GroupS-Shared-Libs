@@ -11,7 +11,7 @@ This project aims to provide a comprehensive solution for managing and organizin
 
 ### 1. Code Organization
 
-The project offers a structured approach to organizing C++ code. It provides a directory structure that separates different components of the program, such as **constants**, **anomalous dimension**, and **hard functions**. This organization system helps in locating and managing code files efficiently.Such as QCD Beta function:
+The project offers a structured approach to organizing C++ code. It provides a directory structure that separates different components of the program, such as **constants**, **anomalous dimension**, and **hard functions**. This organization system helps in locating and managing code files efficiently. Such as QCD Beta function:
 
 $$
 \beta(\alpha_{s})=-2\alpha_{s}\sum_{n=0}^{\infty}\beta_{n}\left(\frac{\alpha_{s}}{4\pi}\right)^{n+1},
