@@ -35,7 +35,9 @@ Consistency in coding style is crucial for readability and maintainability. The 
 
 ### 4. Dependency Management
 
-Managing dependencies is simplified with the project's built-in dependency management system. It allows developers to specify the required libraries and versions, automatically resolving and fetching them, thus streamlining the development process.
+This project relies on the following C++ libraries or programs: 
+| Eigen3  | LHAPDF  | CUBA   |
+| ------- | ------- |------- |
 
 
 ## Conclusion
