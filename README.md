@@ -54,8 +54,12 @@ Consistency in coding style is crucial for readability and maintainability. The 
 ### 4. Dependency Management
 
 This project relies on the following C++ libraries or programs: 
-| Eigen3  | LHAPDF  | CUBA   |
+
+
+| [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)  | [LHAPDF](https://lhapdf.hepforge.org/)  | [CUBA](http://www.feynarts.de/cuba/)   |
 | ------- | ------- |------- |
+
+
 
 
 ## Conclusion
