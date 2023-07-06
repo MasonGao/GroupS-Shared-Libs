@@ -1,5 +1,10 @@
-// MV dipole model with simple matching for x > x0
-// and simple evolution in x to compensate rcBK
+/*
+ * File: dipole_models.h
+ * Author: Kaiyuan Shi
+ * Date: July 6, 2023
+ * Description: MV dipole models with simple matching for x > x0 and simple evolution in x to compensate rcBK
+*/
+
 
 #ifndef DIPOLE_MODELS_H
 #define DIPOLE_MODELS_H
