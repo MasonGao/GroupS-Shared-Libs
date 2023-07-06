@@ -5,7 +5,13 @@ The goal of this project is to manage generic C++ code of Group'S .
 
 ## Introduction
 
-This project aims to provide a comprehensive solution for managing and organizing generic C++ code in HEP calculation. It is designed to simplify the calculation process, improve code maintainability, and enhance collaboration among students in Group'S. Such as QCD Beta function:
+This project aims to provide a comprehensive solution for managing and organizing generic C++ code in HEP calculation. It is designed to simplify the calculation process, improve code maintainability, and enhance collaboration among students in Group'S. 
+
+## Features
+
+### 1. Code Organization
+
+The project offers a structured approach to organizing C++ code. It provides a directory structure that separates different components of the program, such as **constants**, **anomalous dimension**, and **hard functions**. This organization system helps in locating and managing code files efficiently.Such as QCD Beta function:
 
 $$
 \beta(\alpha_{s})=-2\alpha_{s}\sum_{n=0}^{\infty}\beta_{n}\left(\frac{\alpha_{s}}{4\pi}\right)^{n+1},
@@ -17,12 +23,6 @@ double Beta[4] = {(11 * CA) / 3. - (4 * nf * TF) / 3., (34 * pow(CA, 2)) / 3. - 
 ```
 
 
-
-## Features
-
-### 1. Code Organization
-
-The project offers a structured approach to organizing C++ code. It provides a directory structure that separates different components of the program, such as **constants**, **anomalous dimension**, and **hard functions**. This organization system helps in locating and managing code files efficiently.
 
 ### 2. Build System
 
