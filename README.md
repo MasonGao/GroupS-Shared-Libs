@@ -32,6 +32,16 @@ The project includes a reliable build system that automates the compilation and 
 ### 3. Code Formatting and Style Guidelines
 
 Consistency in coding style is crucial for readability and maintainability. The project enforces code formatting rules and adheres to widely accepted style guidelines, making the codebase consistent and easier to understand.
+1. Indentation: Use two spaces for indentation instead of tabs.
+2. Line Length: Keep each line of code within 80 characters or fewer, and break lines that exceed this limit.
+3. Braces: Place the opening brace on its own line, aligned with the control structure, and align the closing brace with the ending position of the control structure.
+4. Variable Naming: Use lowercase letters and underscores for variable names, e.g., "my_variable".
+5. Type Naming: Use camel case for type names, e.g., "MyClass".
+6. Constant Naming: Use uppercase letters and underscores for constant names, e.g., "CONSTANT_VALUE".
+7. Function Naming: Use camel case for function names, starting with a lowercase letter, e.g., "myFunction".
+8. Comments: Use C++-style double-slash comments "//" and follow specific comment formatting guidelines.
+9. File Header Comments: Each source file should include copyright information and a brief description in a file header comment.
+10. Operator Spacing: Leave appropriate spaces around operators to improve readability.
 
 ### 4. Dependency Management
 
