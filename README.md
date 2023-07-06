@@ -62,9 +62,10 @@ This project relies on the following C++ libraries or programs:
 
 
 
-## Conclusion
+## Call to Action
 
-In summary, this project aims to streamline workflow, improve collaboration, and enhance the overall quality of their codebase.
+Whether you have a particular passion about a specific language or framework, want to help in creating a more robust codeblock, or generally have interesting ideas on how to make this better, we'd love to have you!
+
 
 
 
