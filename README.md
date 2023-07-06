@@ -1,7 +1,15 @@
+<div align="center">
 
-# **Project Description**
+# ◐ &nbsp; C++ Shared Library &nbsp; ◑
 
-The goal of this project is to manage generic C++ code of Group'S . 
+**The goal of this project is to manage generic C++ code of Group'S.**
+
+<br />
+
+</div>
+
+
+
 
 ## Introduction
 
