@@ -1,0 +1,30 @@
+Example can be found /mnt/share @10.158.198.66   
+
+1. Write """ source scl_source enable devtoolset-11  """ to ~/.bashrc
+2. Run """ /opt/anaconda3/bin/conda init bash """
+3. Download and Install LHAPDF
+
+./configure --prefix=/home/YOUR_HOME/lhapdf
+make -j6
+make install
+
+
+4. Modify .bashrc
+   ref: "https://lhapdf.hepforge.org/install.html"
+
+
+export PATH=$PATH:/home/YOUR_HOME/lhapdf/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/YOUR_HOME/lhapdf/lib
+export PKG_CONFIG_PATH=/home/YOUR_HOME/lhapdf/lib/pkgconfig:$PKG_CONFIG_PATH
+export PYTHONPATH=$PYTHONPATH:/home/YOUR_HOME/lhapdf/lib/python3.10/site-packages/lhapdf
+
+
+
+5. cp " dijet.cpp ", " meson.build " to your home dir
+  using """ meson build """ Compile
+  cd build && ninja
+  Run """ ./dijet input.card """
+  When reconfigure using """ meson --reconfigure build && cd build && ninja """
+
+
+
