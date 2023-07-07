@@ -1,4 +1,4 @@
-Example can be found /mnt/share @10.158.198.66   
+Example can be found at "/mnt/share" in the server [10.158.198.66](10.158.198.66)
 
 1. Write """ source scl_source enable devtoolset-11  """ to ~/.bashrc
 2. Run """ /opt/anaconda3/bin/conda init bash """
