@@ -32,9 +32,11 @@ double Beta[4] = {(11 * CA) / 3. - (4 * nf * TF) / 3., (34 * pow(CA, 2)) / 3. - 
 
 
 
-### 2. Build System
+### 2. Examples
 
 The project includes a reliable build system that automates the compilation and linking process. It supports various build configurations, allowing developers to build the code for different platforms and environments effortlessly.
+
+To access the documentation on how to compile and run several examples, please navigate to the 'example' folder. To use the documentation, you will need to log in to the corresponding server within Fudan University's internal network.
 
 
 ### 3. Code Formatting and Style Guidelines
