@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 '''
     File: lhapdf_into_table.py
     Author: Kaiyuan Shi
@@ -7,7 +8,12 @@
         The tables are given in x, Q in log scale.
     Args:
         name: name of the pdf set, e.g. 'cteq6l1'
-        ind: index of set to use, 0 by default
+        index: index of set to use, 0 by default
+    Instruction:
+        $ python lhapdf_into_table.py --name NAME_OF_SET --index INDEX_OF_SET
+        To generate in another folder, change the name of PDFFF_dir.
+    To read the tables:
+        np.array(pd.read_table(TABLE_NAME, sep='&'))
 '''
 
 import numpy as np
@@ -19,19 +25,21 @@ import lhapdf
 import os
 from argparse import ArgumentParser
 
+PDFFF_dir = './PDFFF/'
+
 def PDF_generate(PDF_setname, ind = 0):
-    # Get the names of the PDF sets:
-    if not os.path.exists('./PDFFF/'):
-        os.makedirs('./PDFFF/')
-
-    d_setname = './PDFFF/' + PDF_setname + str(ind) + '_d.txt'
-    u_setname = './PDFFF/' + PDF_setname + str(ind) + '_u.txt'
-    s_setname = './PDFFF/' + PDF_setname + str(ind) + '_s.txt'
-    c_setname = './PDFFF/' + PDF_setname + str(ind) + '_c.txt'
-    b_setname = './PDFFF/' + PDF_setname + str(ind) + '_b.txt'
-    g_setname = './PDFFF/' + PDF_setname + str(ind) + '_g.txt'
-
     p = lhapdf.mkPDF(PDF_setname, ind)
+    if not os.path.exists(PDFFF_dir):  # Create the directory if doesn't exist.
+        os.makedirs(PDFFF_dir)
+
+    # Get the names of the PDF sets:
+        d_setname = PDFFF_dir + PDF_setname + str(ind) + '_d.txt'
+    u_setname = PDFFF_dir + PDF_setname + str(ind) + '_u.txt'
+    s_setname = PDFFF_dir + PDF_setname + str(ind) + '_s.txt'
+    c_setname = PDFFF_dir + PDF_setname + str(ind) + '_c.txt'
+    b_setname = PDFFF_dir + PDF_setname + str(ind) + '_b.txt'
+    g_setname = PDFFF_dir + PDF_setname + str(ind) + '_g.txt'
+
 
     # Get the ranges of x and Q2 for table generation.
     Q2 = np.logspace(log10(p.q2Min), log10(p.q2Max), base = 10, num = 500)
@@ -39,7 +47,6 @@ def PDF_generate(PDF_setname, ind = 0):
 
     # Begin table generation and record time.
     start = datetime.now()
-
     print(PDF_setname + str(ind) + ' starting at ' + start.strftime("%Y/%m/%d %H:%M:%S"))
     
     steps_total = len(Q2) * len(X)
@@ -47,7 +54,6 @@ def PDF_generate(PDF_setname, ind = 0):
     
     X_arr = np.zeros(steps_total)
     Q_arr = np.zeros(steps_total)
-    
     d_arr = np.zeros(steps_total)
     u_arr = np.zeros(steps_total)
     s_arr = np.zeros(steps_total)
@@ -70,7 +76,6 @@ def PDF_generate(PDF_setname, ind = 0):
 
             steps_taken += 1
 
-
     d_table = np.zeros((len(X_arr), 3))
     u_table = np.zeros((len(X_arr), 3))
     s_table = np.zeros((len(X_arr), 3))
@@ -90,17 +95,15 @@ def PDF_generate(PDF_setname, ind = 0):
     aQ2 = np.logspace(log10(0.5), 11, base = 10, num = 2000)
     a_arr = np.zeros(len(aQ2))
     a_setname = '../PDFFF/' + PDF_setname + str(ind) + '_a.txt'
-
     steps_taken = 0
     for aq2 in aQ2:
         a_arr[steps_taken] = p.alphasQ2(aq2)
         steps_taken += 1
-
     a_table = np.zeros((len(a_arr), 2))
     for i in range(len(a_arr)):
         a_table[i] = [aQ2[i], a_arr[i]]
 
-    # Save the tables.
+    # Save the tables into .txt formats.
     np.savetxt(d_setname, d_table, delimiter=' & ', header = 'x & Q & F', newline='\n', fmt='%.16f')
     np.savetxt(u_setname, u_table, delimiter=' & ', header = 'x & Q & F', newline='\n', fmt='%.16f')
     np.savetxt(s_setname, s_table, delimiter=' & ', header = 'x & Q & F', newline='\n', fmt='%.16f')
@@ -112,13 +115,15 @@ def PDF_generate(PDF_setname, ind = 0):
     end = datetime.now()
     print(PDF_setname + str(ind) + ' completed at ' + end.strftime("%Y/%m/%d %H:%M:%S") + ', using ' + str(end - start))
 
-parser = ArgumentParser(description = 'Generate the PDF or FF datasets given the name and index.')
-parser.add_argument('--name', type = str, help = 'The name of the dataset for table generation.')
-parser.add_argument('--index', type = int, default = 0, help = 'The index of dataset')
-args = parser.parse_args()
 
 if __name__ == "__main__":
+    # Add arguments
+    parser = ArgumentParser(description = 'Generate the PDF or FF datasets given the name and index.')
+    parser.add_argument('--name', type = str, help = 'The name of the dataset for table generation.')
+    parser.add_argument('--index', type = int, default = 0, help = 'The index of dataset')
+    args = parser.parse_args()
 
     PDF_setname = args.name
     ind = int(args.index)
+
     PDF_generate(PDF_setname, ind)
