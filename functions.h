@@ -66,12 +66,12 @@ MatrixXcd u_f(MatrixXcd m, double mu, double nu)
     return (v_m * ((log(r_n) * g_D).exp()) * v_m.inverse());
 };
 
-double mub_star(double b)
+double b_star(double b)
 {
     return (b / sqrt(1 + b * b / bmax / bmax));
 };
 
-double mub_f(double b)
+double mub_f(double b) //usually use b_star above as the b-variable
 {
     return (2 / b / exp(EULERGAMMA));
 };
