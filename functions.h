@@ -1,3 +1,7 @@
+#include <LHAPDF/LHAPDF.h>
+#include <cmath>
+using namespace std;
+
 
 double Beta[4] = {(11 * CA) / 3. - (4 * nf * TF) / 3., (34 * pow(CA, 2)) / 3. - (20 * CA * nf * TF) / 3. - 4 * CF *nf *TF, (2857 * pow(CA, 3)) / 54. + ((-1415 * pow(CA, 2)) / 27. - (205 * CA * CF) / 9. + 2 * pow(CF, 2)) * nf *TF + ((158 * CA) / 27. + (44 * CF) / 9.) * pow(nf, 2) * pow(TF, 2), 149753 / 6. + (1093 * pow(nf, 3)) / 729. + 3564 * riemann_zeta(3) + pow(nf, 2) * (50065 / 162. + (6472 * riemann_zeta(3)) / 81.) - nf * (1078361 / 162. + (6508 * riemann_zeta(3)) / 27.)};
 
@@ -15,7 +19,7 @@ double S_f(int o, double ga[], double mu, double nu)
         return (ga[0] / 4. / pow(Beta[0], 2) * (4 * PI / a_s(nu) * (1 - 1 / r - log(r))));
     if (o == 1)
         return (ga[0] / 4. / pow(Beta[0], 2) * (4 * PI / a_s(nu) * (1 - 1 / r - log(r))) + ga[0] / 4 / pow(Beta[0], 2) * ((ga[1] / ga[0] - Beta[1] / Beta[0]) * (1 - r + log(r)) + Beta[1] / 2 / Beta[0] * pow(log(r), 2)));
-};
+};//The a_s function may gives you an error here, if so you can define the a_s function above using ('double a_s(double q){return alphasPDFM(q);}')
 
 double a_f(int o, double ga[], double f, double i)
 {
