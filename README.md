@@ -65,7 +65,6 @@ Eigen's website may be inaccessible sometimes, you can try command:
 
 sudo apt-get install eigensoft(Linux)
 
-pip3 install eigensoft (mac/windows)
 
 
 ## Call to Action
