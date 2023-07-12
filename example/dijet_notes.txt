@@ -9,6 +9,8 @@ make -j6
 make install
 
 
+(The installation path should better be empty.)
+
 4. Modify .bashrc
    ref: "https://lhapdf.hepforge.org/install.html"
 
