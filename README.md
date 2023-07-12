@@ -63,9 +63,13 @@ This project relies on the following C++ libraries or programs:
 
 Eigen's website may be inaccessible sometimes, you can try command:
 
-sudo apt-get install eigensoft(Linux)
+$$sudo apt-get install eigensoft(Linux)$$
 
+To install CUBA,you should change directory to the CUBA's folder and do these commands:
 
+$$./configure --prefix=/path/to/install/
+make 
+make install$$
 
 ## Call to Action
 
