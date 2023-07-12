@@ -62,16 +62,16 @@ This project relies on the following C++ libraries or programs:
 | ------- | ------- |------- |
 
 Eigen's website may be inaccessible sometimes, you can try command(Linux):
-...
+```
 sudo apt-get install eigensoft
-...
+```
 
 To install CUBA,you should change directory to the CUBA's folder and do these commands:
-...
+```
 ./configure --prefix=/path/to/install/
 make 
 make install
-...
+```
 ## Call to Action
 
 Whether you have a particular passion about a specific language or framework, want to help in creating a more robust codeblock, or generally have interesting ideas on how to make this better, we'd love to have you!
