@@ -61,7 +61,9 @@ This project relies on the following C++ libraries or programs:
 | [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)  | [LHAPDF](https://lhapdf.hepforge.org/)  | [CUBA](http://www.feynarts.de/cuba/)   |
 | ------- | ------- |------- |
 
-
+Eigen's website maybe no access to browse, you can try command:
+sudo apt-get install eigensoft(Linux)
+pip3 install eigensoft (mac/windows)
 
 
 ## Call to Action
